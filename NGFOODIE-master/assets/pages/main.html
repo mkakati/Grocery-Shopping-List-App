@@ -1,0 +1,351 @@
+<!-- main page starts from here... -->
+<div class="main" ng-controller="mainController">
+
+  <div class="row">
+
+    <nav class="navbar navbar-default navbar-fixed-top remove-border-property">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Foodie</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#!/home">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Order Online</a></li>
+                  <li><a href="#!/">Logout</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- <nav class="navbar navbar-default navbar-fixed-top remove-border-property" style="top: 50px; background:rgba(0,0,0,0.3);">
+      <div class="search-bar" style="margin-top: 10px;">
+          <form>
+            <div class="input-wrapper">
+              <input type="text" class="form-control" placeholder="Search..." ng-model="searchResult">
+            </div>
+            <button type="submit" class="btn btn-default">Search</button>
+          </form>
+      </div>
+    </nav> -->
+
+    <div class="ui remove-border-property">
+
+        <div class="hero">
+
+          <div id="foodie-logo">
+            Foodie
+          </div>
+
+          <p style="font-size: 2.3rem; margin-top: 30px;">Find the best restaurants in town</p>
+
+          <div class="col-md-5 col-sm-8 col-xs-12">
+          <div class="search-bar" style="margin-top: 10px;">
+              <form>
+                <div class="input-wrapper">
+                  <input type="text" class="form-control" placeholder="Search..." ng-model="searchResult">
+                </div>
+                <button type="submit" class="btn btn-color" >Search</button>
+              </form>
+          </div>
+        </div>
+        </div>
+
+
+
+
+        <!-- adding information of restaurant one by one  -->
+        <div class="middle-outer">
+
+          <div ng-repeat="restaurant in restaurants | filter:searchResult" class="col-md-4">
+
+            <div  class="row restaurant">
+              <div class="col-md-10 col-sm-10 col-xs-10"style="margin-top: 10px;">
+                <div class="rest-wrapper">
+                    <div class="image">
+                        <img ng-src="{{restaurant.image}}" height="100" width="100">
+                    </div>
+                    <div class="rest-info">
+                        <div class="rest-category">
+                           <small>{{restaurant.category}} </small>
+                        </div>
+                        <div class="rest-name">
+                          <a ng-href="#!/restaurant/{{restaurant.id}}"><strong>{{restaurant.name}}</strong></a>
+                        </div>
+                        <div>
+                           <strong> {{restaurant.location}}</strong>
+                        </div>
+                        <div class="rest-address">
+                            {{restaurant.address}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rest-extra">
+                    <div class="type">
+                        <div><small>Cuisines:</small></div>
+                        <div><small>Cost for Two: </small></div>
+                        <div><small>Hours:</small></div>
+                    </div>
+                    <div class="value">
+                        <div>{{restaurant.cuisines}}</div>
+                        <div>₹ {{restaurant.cost | number}}</div>
+                        <div>{{restaurant.hours}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-sm-2 col-xs-2">
+              <div class="rating">
+                  <strong>{{restaurant.vote}}</strong>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    <!-- end restaurant information -->
+
+    </div>
+    <!-- end of outer class -->
+
+  </div>
+</div>
+<!-- end of main container class -->
+
+</div>
+
+
+
+
+
+
+<!-- footer of the website -->
+<div class="row" id="main-footer" >
+
+  <div class="container-fluid">
+
+<!-- first row of the footer -->
+    <div class="row">
+      <div class="middle-outer">
+        <div class="col-md-4">
+          <ul class="nav flex-column bottom-line">
+            <li class="nav-item">
+              <a class="nav-link footer-headers">About Zomato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Culture</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <ul class="nav flex-column bottom-line">
+            <li class="nav-item">
+              <a class="nav-link footer-headers">For Foodies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Code of Conduct</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Community</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Verified Users</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blogger Help</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Developers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Mobile Apps</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <ul class="nav flex-column bottom-line">
+            <li class="nav-item">
+              <a class="nav-link footer-headers">For Restaurants</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Add a Restuarant</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Claim your Listing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Business App</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Business Owner Guidelines</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Business Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Restaurant Widgets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Products for Business</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+<!-- second row of the footer -->
+    <div class="row">
+      <div class="middle-outer"><div class="footer-separator"></div>
+        <div class="col-md-4">
+
+          <ul class="nav flex-column bottom-line">
+            <li class="nav-item">
+              <a class="nav-link footer-headers">Countries</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Australia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Brasil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Canada</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Chile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Czech</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <ul class="nav flex-column bottom-line">
+            <li class="nav-item">
+              <a class="nav-link" href="#">India</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Indonesia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ireland</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Italy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Lebanon</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <ul class="nav flex-column bottom-line">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Qatar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Singapore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">slovakia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">South Africa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sri Lanka</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<!-- third row of the footer -->
+    <div class="row" id="third-footer">
+
+      <div class="middle-outer"><div class="footer-separator"></div>
+
+        <div class="col-md-8 col-xs-12">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Privacy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Terms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">API Policy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CSR</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Security</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sitemap</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 col-xs-12">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i title="facebook" class="fa fa-facebook" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i title="twitter" class="fa fa-twitter" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><span title="gmail" class="glyphicon glyphicon-envelope"></span></a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+<!-- fourth row of the footer -->
+    <div class="row">
+      <div class="middle-outer"><div class="footer-separator"></div>
+        <div class="col-md-12">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" id="copyright">By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. © 2008-2017 - Zomato™ Media Pvt Ltd. All rights reserved.</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

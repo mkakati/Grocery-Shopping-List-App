@@ -1,0 +1,243 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F3F3E8;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.remove-border-property {
+    border: 0!important;
+    border-radius: 0!important;
+    margin-bottom: 0!important;
+}
+
+.hero {
+    background-image: url('https://anandipaliwal.files.wordpress.com/2015/06/food-table-relisted.jpg');
+    background-size: cover;
+    min-height: 400px;
+    background-attachment: fixed;
+    color: white;
+    font-size: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-color {
+    color: white;
+    background: #cb202d;
+}
+.btn-color:hover {
+    color: white;
+    opacity: 0.9;
+}
+.hero  #foodie-logo {
+    height: 120px; line-height: 120px; text-align: center; background-color: #cb202d; margin-top: 100px; width: 130px;
+    border-radius: 5px;
+}
+
+#app .navbar {
+    color: white;
+    background-color: #cb202d;
+}
+
+#app .navbar a {
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+#app .login {
+    background-color: #cb202d;
+    height: 100vh;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#app .login-form {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding: 1rem;
+    padding-top: 0;
+    border-radius: 4px;
+}
+
+
+/*this is class fourth*/
+.hero {
+    margin-bottom: 2rem;
+}
+
+/*.restaurant {
+    background-color: white;
+    position: relative;
+    width: 300px;
+    margin-left: 10px;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 4px;
+}*/
+
+.restaurant {
+    background: #ffffff;
+    margin: 1px;
+    margin-top: 10px;
+    border-radius: 4px;
+
+}
+.myClass {
+    background: yellow;
+}
+.rest-wrapper {
+    display: flex;
+    font-family: sans-serif;
+}
+
+#wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.rest-wrapper .image {
+    margin-right: 1rem;
+}
+
+.rest-wrapper .image img {
+    border-radius: 4px;
+}
+
+.rest-wrapper .rest-name {
+    font-size: 24px;
+    color: #cb202d;
+}
+
+.rest-wrapper .rest-category {
+    color: #89959B;
+    text-transform: uppercase;
+}
+
+.rest-wrapper .rest-address {
+    color: #89959B;
+}
+
+.rest-extra {
+    display: flex;
+    margin-top: 1rem;
+    border-top: 1px solid #e7e7e7;
+    padding: 1rem;
+}
+
+.rest-extra .type {
+    text-transform: uppercase;
+     color: #89959B;
+     flex: none;
+     margin-right: 2rem;
+}
+
+.restaurant .rating {
+    color: white;
+    background-color: #5BA829;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+    border-radius: 4px;
+    letter-spacing: 2px;
+}
+
+
+.search-bar {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+.search-bar form {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar form .input-wrapper {
+   flex: 1;
+   margin-right: 1rem;
+}
+
+/***** middle part of the website which shows restaurant informations ******/
+
+@media only screen and (min-width: 992px) {
+  .middle-outer {
+    margin-left: 10%; margin-right: 10%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .middle-outer ul.bottom-line li {
+    display: block;
+    height: 30px;
+    border-bottom: 1px solid #3C3F46;
+
+  }
+  .middle-outer ul {
+    margin: 10px;
+  }
+}
+.middle-outer {
+  margin-top: 10px;
+}
+
+/***** Css for Footer ******/
+#main-footer {
+  margin-top: 50px;
+  border-top: 10px solid green;
+  background: #282C35;
+  padding-bottom: 30px;
+}
+#main-footer ul li {
+  font-size: 13px;
+}
+ul li.nav-item:hover,
+ul li.nav-item a:hover,
+ul li.nav-item a,
+ul li.nav-item a:link {
+  background: transparent;
+  color: #ADB0B6;
+}
+ul li.nav-item a {
+  padding-top: 0px;
+  padding-bottom: 5px;
+
+}
+.footer-headers {
+  font-size: 15px;
+  font-weight: bold;
+}
+#main-footer .middle-outer hr{
+
+}
+.footer-separator {
+  height: 1px;
+  background: #3C3F46;
+  margin-bottom: 20px;
+}
+#third-footer ul li{
+  display: inline-block;
+}
+#copyright {
+  color: #3C3F46;
+  font-size: 10px;
+}
